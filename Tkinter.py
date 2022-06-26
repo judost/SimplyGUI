@@ -1,5 +1,41 @@
 from tkinter import *
 
+# -----------------------------------------
+
+import logging 
+from logging.handlers import RotatingFileHandler, TimedRotatingFileHandler
+import time
+from datetime import datetime
+from random import randint
+
+
+longname = datetime.now().strftime('./Mine/logg/mylog.log_%Y%m%d.log')
+
+
+LogHandler = TimedRotatingFileHandler(filename=f'{longname}', when='midnight', interval=1, encoding='utf-8')
+LogHandler.setFormatter(logging.Formatter('%(asctime)s / %(message)s'))
+LogHandler.suffix = "./Mine/logg/mylog.log_%Y%m%d.log"
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logger.addHandler(LogHandler)
+
+
+
+# -----------------------------------------
+'''
+longname = datetime.now().strftime('./Mine/logg/mylog.log_%Y%m%d.log')
+
+LHandler = RotatingFileHandler(f'{longname}', maxBytes=32*5, backupCount=5)
+LHandler.setFormatter(logging.Formatter('%(asctime)s / %(message)s' ))
+MyLogHandler = TimedRotatingFileHandler(filename=f'{longname}', when='midnight', interval=1, encoding='utf-8')
+MyLogHandler.suffix = "./Mine/logg/mylog.log_%Y%m%d.log"
+logger = logging.getLogger(__name__)
+logger.addHandler(LHandler)
+logger.setLevel(logging.DEBUG)
+'''
+# -----------------------------------------
+
 mainGUI = Tk()
 mainGUI.title('MyProject')
 mainGUI.geometry('240x500')
@@ -12,8 +48,11 @@ from random import randint
 def Title_Update():
     ranNum = randint(0, 1000)
     label0.config(text=ranNum)
-    ranNum = randint(0, 1000)
-    label1.config(text=ranNum)
+    ranNum1 = randint(0, 1000)
+    label1.config(text=ranNum1)
+    
+    logger.debug(f'{ranNum}, {ranNum1}')
+    
     mainGUI.after(1000, Title_Update)
 
 
