@@ -36,6 +36,16 @@ logger.setLevel(logging.DEBUG)
 '''
 # -----------------------------------------
 
+def NewFolder(path):
+    try:        
+        if not os.path.exists(path):
+            os.makedirs(path)
+    except:
+        print ('Folder make Error') 
+        pass
+
+
+
 mainGUI = Tk()
 mainGUI.title('MyProject')
 mainGUI.geometry('240x500')
