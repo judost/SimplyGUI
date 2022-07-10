@@ -44,6 +44,8 @@ def NewFolder(path):
         print ('Folder make Error') 
         pass
 
+# with open(f'../log/{NT}info.txt', 'w') as f:
+#     f.write(str(DNS))
 
 
 mainGUI = Tk()
