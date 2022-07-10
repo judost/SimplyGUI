@@ -7,6 +7,7 @@ Python Tkinter로 구현하는 간단한 GUI
 
 ### 1.2 상대 경로 바로가기 만들기
 ##### 1. txt 만들기
-##### 2 . 아래 내용 복붙
+##### 2. 아래 내용 복붙
     cd .\your folder path\
     start "" ".\main.exe"
+##### 3. txt -> cmd로 변경
