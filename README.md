@@ -10,4 +10,4 @@ Python Tkinter로 구현하는 간단한 GUI
 ##### 2. 아래 내용 복붙
     cd .\your folder path\
     start "" ".\main.exe"
-##### 3. txt -> cmd로 변경
+##### 3. 확장자를 txt -> cmd로 변경
