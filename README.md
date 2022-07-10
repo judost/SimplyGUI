@@ -9,5 +9,5 @@ Python Tkinter로 구현하는 간단한 GUI
 
 1. txt 만들기
 2 . 아래 내용 복붙
-    cd .\your folder path\
-    start "" ".\main.exe"
+        cd .\your folder path\
+        start "" ".\main.exe"
